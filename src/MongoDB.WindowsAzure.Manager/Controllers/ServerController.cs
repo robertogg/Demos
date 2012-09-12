@@ -75,7 +75,7 @@ namespace MongoDB.WindowsAzure.Manager.Controllers
             {
                 var result = mongo["admin"].RunCommand("replSetStepDown");
                 return RedirectToAction("Details", new { id = id });
-            }
+            } 
             catch (EndOfStreamException)
             {
                 // [PC] This occurs when the command succeeded - driver bug?
